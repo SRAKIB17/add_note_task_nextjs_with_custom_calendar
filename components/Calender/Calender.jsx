@@ -9,25 +9,25 @@ const Calender = () => {
 
     const [modal, setShowModal] = useState(null);
 
-    const [AllNote, setAllNote] = useState([])
+    const [allNoteTask, setNoteTask] = useState([])
 
     const AddTaskHandle = e => {
         e.preventDefault();
 
         const title = e.target.title.value;
-        const bg_color = e.target.bg_color.value?.slice(1)
-        const color = e.target.color.value?.slice(1)
+        const bg_color = e.target.bg_color.value
+        const color = e.target.color.value
         const time_from = e.target.time_from.value
         const time_to = e.target.time_to.value;
         const note = e.target.note.value;
         const noteTask = {
-            title, color, bg_color, time_from, time_to, note
+            title, color, bg_color, time_from, time_to, note, date: modal
         }
 
-        
+        setShowModal(null)
+        setNoteTask([...allNoteTask, noteTask])
     }
 
-    console.log(modal)
     return (
         <div className=''>
 
@@ -46,13 +46,16 @@ const Calender = () => {
                         setShowModal={setShowModal}
                         month={selectMonth}
                         year={selectYear}
+                        allNoteTask={allNoteTask}
                     />
                 </div>
 
             </div>
             {
                 modal &&
-                <AddNote setShowModal={setShowModal} AddTaskHandle={AddTaskHandle} />
+                <div className='z-[300]'>
+                    <AddNote setShowModal={setShowModal} AddTaskHandle={AddTaskHandle} />
+                </div>
             }
         </div>
     );

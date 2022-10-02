@@ -16,7 +16,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
                             <tbody>
                                 <tr>
                                     <th>
-                                        <label for="title" className='flex items-center gap-2'>
+                                        <label htmlFor="title" className='flex items-center gap-2'>
                                             Title :
                                         </label>
                                     </th>
@@ -34,7 +34,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
 
                                 <tr>
                                     <th>
-                                        <label for="color" className='flex items-center gap-2'>
+                                        <label htmlFor="color" className='flex items-center gap-2'>
                                             Color :
                                         </label>
                                     </th>
@@ -51,7 +51,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
 
                                 <tr>
                                     <th>
-                                        <label for="bg_color" className='flex items-center gap-2'>
+                                        <label htmlFor="bg_color" className='flex items-center gap-2'>
                                             Bg Color :
                                         </label>
                                     </th>
@@ -68,7 +68,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
 
                                 <tr>
                                     <th>
-                                        <label for="time_from" className='flex items-center gap-2'>
+                                        <label htmlFor="time_from" className='flex items-center gap-2'>
                                             From
                                         </label>
                                     </th>
@@ -85,7 +85,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
 
                                 <tr>
                                     <th>
-                                        <label for="time_to" className='flex items-center gap-2'>
+                                        <label htmlFor="time_to" className='flex items-center gap-2'>
                                             To
                                         </label>
                                     </th>
@@ -102,7 +102,7 @@ const AddNote = ({ setShowModal, AddTaskHandle }) => {
 
                                 <tr>
                                     <th>
-                                        <label for="note" className='flex items-center gap-2'>
+                                        <label htmlFor="note" className='flex items-center gap-2'>
                                             Note :
                                         </label>
                                     </th>
